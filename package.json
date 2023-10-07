@@ -1,0 +1,11 @@
+{
+	"name": "warcraft3-ladder",
+	"version": "1.0.0",
+	"description": "Warcraft 3 Ladder Stats",
+	"main": "server.js",
+	"scripts": {
+		"start": "node backend/server.js"
+	},
+	"author": "Galen Casstevens",
+	"license": "MIT"
+}
