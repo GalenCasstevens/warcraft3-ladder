@@ -1,11 +1,21 @@
 {
 	"name": "warcraft3-ladder",
 	"version": "1.0.0",
-	"description": "Warcraft 3 Ladder Stats",
+	"description": "Warcraft 3 ladder stats",
 	"main": "server.js",
 	"scripts": {
-		"start": "node backend/server.js"
+		"start": "node backend/server.js",
+		"server": "nodemon backend/server.js",
+		"client": "npm start --prefix frontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"build": "npm i && cd frontend && npm i && npm run build"
 	},
 	"author": "Galen Casstevens",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"concurrently": "^8.2.1"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
 }

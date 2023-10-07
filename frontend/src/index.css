@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Warcraft';
+	src: url('../public/fonts/LifeCraft.ttf');
+}
+
+body {
+	background-color: #000;
+}
+
+table {
+	margin-top: 60px;
+	border: 1px solid black;
+	font-weight: bold;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.navbar {
+	background-image: linear-gradient(#454545, #fff, #fff, #fff, #454545);
+}
+
+.navbar,
+.navbar-brand {
+	padding: 0px;
+	padding-left: 15px;
+}
+
+.navbar.brand,
+#page-title,
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#page-title {
+	font-family: 'Warcraft';
+	font-weight: 700px;
+	font-size: 50px;
+	padding-left: 5px;
+	color: #ffbf00;
+	-webkit-text-stroke: 2px black;
+}
+
+.logo {
+	width: 100px;
+}
+
+.table-striped {
+	border: 1px solid #b4a300;
+}
+
+.table-striped th {
+	background-color: #2e2d2b;
+	color: #b4a300;
+	text-align: center;
+	border: none;
+}
+
+.table-striped th:not(.player-name-col) {
+	width: 11%;
+}
+
+.table-striped tr {
+	color: #fff;
+}
+
+.table-striped tr td {
+	border: none;
+}
+
+.table-striped tr td:not(.player-name-col, .clan-col) {
+	color: #fff;
+}
+
+.table-striped tr td:not(.player-name-col) {
+	text-align: center;
+}
+
+td.player-name-col,
+td.clan-col {
+	color: #b4a300;
+}
+
+.table-striped > tbody > tr:nth-child(2n + 1) > td,
+.table-striped > tbody > tr:nth-child(2n + 1) > th {
+	background-color: #271a13;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td,
+.table-striped > tbody > tr:nth-child(2n) > th {
+	background-color: #111111;
+}
+
+.progress {
+	background-color: #000;
+	border: 1px solid #5a5d5a;
+	border-radius: 0px;
+	height: 23px;
+}
+
+.progress-bar {
+	background-image: linear-gradient(#000, #00aaff, #000);
+}
+
+td.icon-img-cell {
+	padding: 0px;
+}
+
+.icon-img {
+	width: 30%;
+}
+
+.level-container {
+	position: relative;
+}
+
+.level-num {
+	position: absolute;
+	z-index: 10;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
