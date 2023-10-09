@@ -1,20 +1,30 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setPlayers } from '../features/players/playerSlice';
+import { setPageItems } from '../features/pagination/paginationSlice';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-
-import PlayerData from '../data/PlayerData';
+import Pagination from '../components/Pagination';
 
 function Leaderboard() {
-	const [players, setPlayers] = useState([]);
+	const { players } = useSelector((state) => state.players);
+	const { active } = useSelector((state) => state.pagination);
+	const { pageItems, TOTAL_ITEMS_PER_PAGE } = useSelector(
+		(state) => state.pagination
+	);
 	const XP_PROGRESS_FACTOR = 0.22;
 	const XP_GAINED_ON_WIN_FACTOR = 100;
 	const XP_LOST_ON_LOSE_FACTOR = 25;
 	const XP_LOST_EXPONENT_BASE = 1.01;
 	const XP_LOST_MAX = 85;
 
+	const dispatch = useDispatch();
+
 	useEffect(() => {
-		setPlayers(PlayerData.players.sort(compareXp));
-	}, []);
+		const tempPlayers = players.slice();
+		dispatch(setPlayers(tempPlayers.sort(compareXp)));
+		dispatch(setPageItems(tempPlayers.slice(0, TOTAL_ITEMS_PER_PAGE)));
+	}, [dispatch]);
 
 	const compareXp = (player1, player2) => {
 		const p1Xp = calcXp(player1.wins, player1.losses);
@@ -54,6 +64,12 @@ function Leaderboard() {
 		);
 	};
 
+	const paginatedIndex = (ind) => {
+		const realInd = ind + 1;
+		const paginationFactor = active - 1;
+		return realInd + paginationFactor * TOTAL_ITEMS_PER_PAGE;
+	};
+
 	const calcLvlProgressPercent = (xp) => {
 		const xpTowardsNext = xp - calcTotalXpReqForCurrLvl(xp);
 		const xpReqForCurr =
@@ -78,11 +94,12 @@ function Leaderboard() {
 	};
 
 	const calcXp = (wins, losses) => {
-		const xpFromWins = wins * XP_GAINED_ON_WIN_FACTOR;
-		let xpFromLosses =
+		const xpFromWins = Math.floor(wins * XP_GAINED_ON_WIN_FACTOR);
+		let xpFromLosses = Math.floor(
 			losses *
-			XP_LOST_ON_LOSE_FACTOR *
-			Math.pow(XP_LOST_EXPONENT_BASE, calcLevel(xpFromWins));
+				XP_LOST_ON_LOSE_FACTOR *
+				Math.pow(XP_LOST_EXPONENT_BASE, calcLevel(xpFromWins))
+		);
 		if (xpFromLosses > XP_LOST_MAX) xpFromLosses = XP_LOST_MAX;
 		const xpNetGain = xpFromWins - xpFromLosses;
 		return xpNetGain;
@@ -97,7 +114,7 @@ function Leaderboard() {
 		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 	};
 
-	if (players && players !== null) {
+	if (pageItems && pageItems !== null) {
 		return (
 			<>
 				<Table striped responsive>
@@ -116,9 +133,9 @@ function Leaderboard() {
 						</tr>
 					</thead>
 					<tbody>
-						{players.map((player, index) => (
+						{pageItems.map((player, ind) => (
 							<tr>
-								<td>{ordinalSuffixOf(index + 1)}</td>
+								<td>{ordinalSuffixOf(paginatedIndex(ind))}</td>
 								<td className="align-middle">
 									<div className="level-container">
 										<ProgressBar
@@ -148,11 +165,14 @@ function Leaderboard() {
 						))}
 					</tbody>
 				</Table>
+				<div style={{ display: 'flex', justifyContent: 'center' }}>
+					<Pagination />
+				</div>
 			</>
 		);
 	}
 
-	return <h1>An unexpected error occurred.</h1>;
+	return <h1 style={{ color: '#fff' }}>An unexpected error occurred.</h1>;
 }
 
 export default Leaderboard;

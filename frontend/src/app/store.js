@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import playerReducer from '../features/players/playerSlice';
+import paginationReducer from '../features/pagination/paginationSlice';
 
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+	reducer: {
+		players: playerReducer,
+		pagination: paginationReducer,
+	},
 });

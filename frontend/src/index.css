@@ -121,3 +121,19 @@ td.icon-img-cell {
 	top: 0;
 	left: 0;
 }
+
+.pagination {
+	text-align: middle;
+}
+
+.page-item.active > .page-link {
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+}
+
+.page-item:not(.active) > .page-link {
+	background-image: linear-gradient(yellow, orange);
+	color: #000;
+	font-weight: bold;
+}
