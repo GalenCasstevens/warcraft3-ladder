@@ -126,6 +126,11 @@ td.icon-img-cell {
 	text-align: middle;
 }
 
+.page-item {
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
 .page-item.active > .page-link {
 	background-color: #fff;
 	color: #000;
@@ -136,4 +141,15 @@ td.icon-img-cell {
 	background-image: linear-gradient(yellow, orange);
 	color: #000;
 	font-weight: bold;
+}
+
+.leaderboard-player-name,
+.leaderboard-clan-name {
+	color: #b4a300;
+	text-decoration: none;
+}
+
+.leaderboard-player-name:hover,
+.leaderboard-clan-name:hover {
+	color: #fff;
 }

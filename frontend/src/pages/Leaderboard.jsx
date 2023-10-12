@@ -2,12 +2,14 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPlayers } from '../features/players/playerSlice';
 import { setPageItems } from '../features/pagination/paginationSlice';
+import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Pagination from '../components/Pagination';
 
 function Leaderboard() {
 	const { players } = useSelector((state) => state.players);
+	const { clans } = useSelector((state) => state.clans);
 	const { active } = useSelector((state) => state.pagination);
 	const { pageItems, TOTAL_ITEMS_PER_PAGE } = useSelector(
 		(state) => state.pagination
@@ -114,6 +116,29 @@ function Leaderboard() {
 		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 	};
 
+	const getClanId = (clanName) => {
+		return clans.find((clan) => clan.name === clanName)._id;
+	};
+
+	const playerInClan = (playerId) => {
+		let result = false;
+		clans.map((clan) => {
+			if (clan.players.some((player) => player.playerId === playerId)) {
+				result = true;
+			}
+		});
+		return result;
+	};
+
+	const getPlayerClan = (playerId) => {
+		let clanName = '';
+		clans.map((clan) => {
+			if (clan.players.some((player) => player.playerId === playerId))
+				clanName = clan.name;
+		});
+		return clanName;
+	};
+
 	if (pageItems && pageItems !== null) {
 		return (
 			<>
@@ -148,7 +173,16 @@ function Leaderboard() {
 										</span>
 									</div>
 								</td>
-								<td className="clan-col">{player.clan}</td>
+								<td className="clan-col">
+									{playerInClan(player._id) && (
+										<Link
+											className="leaderboard-clan-name"
+											to={`clans/${getClanId(getPlayerClan(player._id))}`}
+										>
+											{getPlayerClan(player._id)}
+										</Link>
+									)}
+								</td>
 								<td className="icon-img-cell align-middle">
 									<img
 										className="icon-img"
@@ -156,7 +190,12 @@ function Leaderboard() {
 									/>
 								</td>
 								<td className="player-name-col" colSpan={2}>
-									{player.name}
+									<Link
+										className="leaderboard-player-name"
+										to={`players/${player._id}`}
+									>
+										{player.name}
+									</Link>
 								</td>
 								<td>{numberWithCommas(calcXp(player.wins, player.losses))}</td>
 								<td>{player.wins}</td>
