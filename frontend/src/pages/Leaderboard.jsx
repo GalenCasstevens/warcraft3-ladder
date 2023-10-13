@@ -123,9 +123,8 @@ function Leaderboard() {
 	const playerInClan = (playerId) => {
 		let result = false;
 		clans.map((clan) => {
-			if (clan.players.some((player) => player.playerId === playerId)) {
+			if (clan.players.some((player) => player.playerId === playerId))
 				result = true;
-			}
 		});
 		return result;
 	};

@@ -14,6 +14,10 @@ table {
 	font-family: arial, helvetica, sans-serif;
 }
 
+#logo-link {
+	padding: none;
+}
+
 .navbar {
 	background-image: linear-gradient(yellow, orange);
 }
