@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Profile() {
+const Profile: React.FC = () => {
 	return <div></div>;
-}
+};
 
 export default Profile;

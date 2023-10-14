@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {
 	setPageItems,
 	setActive,
@@ -7,15 +8,15 @@ import {
 import BSPagination from 'react-bootstrap/Pagination';
 
 function Pagination() {
-	const { players } = useSelector((state) => state.players);
-	const { active } = useSelector((state) => state.pagination);
-	const { TOTAL_ITEMS_PER_PAGE } = useSelector((state) => state.pagination);
+	const { players } = useAppSelector((state) => state.players);
+	const { active } = useAppSelector((state) => state.pagination);
+	const { TOTAL_ITEMS_PER_PAGE } = useAppSelector((state) => state.pagination);
 	const totalPages = Math.ceil(players.length / TOTAL_ITEMS_PER_PAGE);
 	let items = [];
 
 	const dispatch = useDispatch();
 
-	const paginate = (number) => {
+	const paginate = (number: number) => {
 		const startInd = (number - 1) * TOTAL_ITEMS_PER_PAGE;
 		const endInd = number * TOTAL_ITEMS_PER_PAGE;
 		dispatch(setActive(number));

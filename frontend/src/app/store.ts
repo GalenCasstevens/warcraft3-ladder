@@ -10,3 +10,6 @@ export const store = configureStore({
 		clans: clanReducer,
 	},
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

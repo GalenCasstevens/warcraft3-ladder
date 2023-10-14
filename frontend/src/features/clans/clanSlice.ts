@@ -8,7 +8,7 @@ const initialState = {
 export const clanSlice = createSlice({
 	name: 'clan',
 	initialState,
+	reducers: {},
 });
 
-export const { setClans } = clanSlice.actions;
 export default clanSlice.reducer;

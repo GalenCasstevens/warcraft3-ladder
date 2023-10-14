@@ -1,17 +1,18 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
 import { setPlayers } from '../features/players/playerSlice';
 import { setPageItems } from '../features/pagination/paginationSlice';
 import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Pagination from '../components/Pagination';
+import { IPlayer } from '../interfaces/player.interface';
 
 function Leaderboard() {
-	const { players } = useSelector((state) => state.players);
-	const { clans } = useSelector((state) => state.clans);
-	const { active } = useSelector((state) => state.pagination);
-	const { pageItems, TOTAL_ITEMS_PER_PAGE } = useSelector(
+	const { players } = useAppSelector((state) => state.players);
+	const { clans } = useAppSelector((state) => state.clans);
+	const { active } = useAppSelector((state) => state.pagination);
+	const { pageItems, TOTAL_ITEMS_PER_PAGE } = useAppSelector(
 		(state) => state.pagination
 	);
 	const XP_PROGRESS_FACTOR = 0.22;
@@ -20,7 +21,7 @@ function Leaderboard() {
 	const XP_LOST_EXPONENT_BASE = 1.01;
 	const XP_LOST_MAX = 85;
 
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		const tempPlayers = players.slice();
@@ -28,7 +29,7 @@ function Leaderboard() {
 		dispatch(setPageItems(tempPlayers.slice(0, TOTAL_ITEMS_PER_PAGE)));
 	}, [dispatch]);
 
-	const compareXp = (player1, player2) => {
+	const compareXp = (player1: IPlayer, player2: IPlayer) => {
 		const p1Xp = calcXp(player1.wins, player1.losses);
 		const p2Xp = calcXp(player2.wins, player2.losses);
 		if (p1Xp > p2Xp) return -1;
@@ -36,7 +37,7 @@ function Leaderboard() {
 		return 0;
 	};
 
-	const ordinalSuffixOf = (n) => {
+	const ordinalSuffixOf = (n: number) => {
 		var j = n % 10;
 		var k = n % 100;
 		if (j == 1 && k != 11)
@@ -66,13 +67,13 @@ function Leaderboard() {
 		);
 	};
 
-	const paginatedIndex = (ind) => {
+	const paginatedIndex = (ind: number) => {
 		const realInd = ind + 1;
 		const paginationFactor = active - 1;
 		return realInd + paginationFactor * TOTAL_ITEMS_PER_PAGE;
 	};
 
-	const calcLvlProgressPercent = (xp) => {
+	const calcLvlProgressPercent = (xp: number) => {
 		const xpTowardsNext = xp - calcTotalXpReqForCurrLvl(xp);
 		const xpReqForCurr =
 			calcTotalXpReqForNextLvl(xp) - calcTotalXpReqForCurrLvl(xp);
@@ -82,20 +83,20 @@ function Leaderboard() {
 		return progressPercent;
 	};
 
-	const calcTotalXpReqForCurrLvl = (xp) => {
+	const calcTotalXpReqForCurrLvl = (xp: number) => {
 		const currLevel = calcLevel(xp);
 		const xpRequired = Math.pow(currLevel / XP_PROGRESS_FACTOR, 2);
 		return xpRequired;
 	};
 
-	const calcTotalXpReqForNextLvl = (xp) => {
+	const calcTotalXpReqForNextLvl = (xp: number) => {
 		const currLevel = calcLevel(xp);
 		const nextLevel = currLevel + 1;
 		const xpRequired = Math.pow(nextLevel / XP_PROGRESS_FACTOR, 2);
 		return xpRequired;
 	};
 
-	const calcXp = (wins, losses) => {
+	const calcXp = (wins: number, losses: number) => {
 		const xpFromWins = Math.floor(wins * XP_GAINED_ON_WIN_FACTOR);
 		let xpFromLosses = Math.floor(
 			losses *
@@ -107,20 +108,20 @@ function Leaderboard() {
 		return xpNetGain;
 	};
 
-	const calcLevel = (xp) => {
+	const calcLevel = (xp: number) => {
 		const level = Math.floor(XP_PROGRESS_FACTOR * Math.sqrt(xp));
 		return level;
 	};
 
-	const numberWithCommas = (num) => {
+	const numberWithCommas = (num: number) => {
 		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 	};
 
-	const getClanId = (clanName) => {
-		return clans.find((clan) => clan.name === clanName)._id;
+	const getClanId = (clanName: string) => {
+		return clans.find((clan) => clan.name === clanName)?._id;
 	};
 
-	const playerInClan = (playerId) => {
+	const playerInClan = (playerId: string) => {
 		let result = false;
 		clans.map((clan) => {
 			if (clan.players.some((player) => player.playerId === playerId))
@@ -129,7 +130,7 @@ function Leaderboard() {
 		return result;
 	};
 
-	const getPlayerClan = (playerId) => {
+	const getPlayerClan = (playerId: string) => {
 		let clanName = '';
 		clans.map((clan) => {
 			if (clan.players.some((player) => player.playerId === playerId))
@@ -157,7 +158,7 @@ function Leaderboard() {
 						</tr>
 					</thead>
 					<tbody>
-						{pageItems.map((player, ind) => (
+						{pageItems.map((player: IPlayer, ind: number) => (
 							<tr>
 								<td>{ordinalSuffixOf(paginatedIndex(ind))}</td>
 								<td className="align-middle">

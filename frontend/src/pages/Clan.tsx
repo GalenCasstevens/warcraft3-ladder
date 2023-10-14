@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Clan() {
+const Clan: React.FC = () => {
 	return <div></div>;
-}
+};
 
 export default Clan;
