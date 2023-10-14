@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {
 	setPageItems,
@@ -14,7 +12,7 @@ function Pagination() {
 	const totalPages = Math.ceil(players.length / TOTAL_ITEMS_PER_PAGE);
 	let items = [];
 
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	const paginate = (number: number) => {
 		const startInd = (number - 1) * TOTAL_ITEMS_PER_PAGE;
