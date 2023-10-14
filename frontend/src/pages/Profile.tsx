@@ -1,7 +1,12 @@
 import React from 'react';
+import BackButton from '../components/BackButton';
 
 const Profile: React.FC = () => {
-	return <div></div>;
+	return (
+		<>
+			<BackButton />
+		</>
+	);
 };
 
 export default Profile;

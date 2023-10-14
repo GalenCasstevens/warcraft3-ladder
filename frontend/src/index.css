@@ -8,7 +8,7 @@ body {
 }
 
 table {
-	margin-top: 60px;
+	margin-top: 67.6667px;
 	border: 1px solid black;
 	font-weight: bold;
 	font-family: arial, helvetica, sans-serif;
@@ -145,6 +145,11 @@ td.icon-img-cell {
 	background-image: linear-gradient(yellow, orange);
 	color: #000;
 	font-weight: bold;
+	border-color: #dee2e6;
+}
+
+.page-item:not(.active) > .page-link:hover {
+	background-image: linear-gradient(#e8e800, #e89600);
 }
 
 .leaderboard-player-name,
@@ -156,4 +161,22 @@ td.icon-img-cell {
 .leaderboard-player-name:hover,
 .leaderboard-clan-name:hover {
 	color: #fff;
+}
+
+.back-btn {
+	background-image: linear-gradient(#408dff, #0d6efd);
+	color: #fff;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.back-btn.btn-primary:hover {
+	color: #fff;
+	background-image: linear-gradient(#3b82eb, #0a58ca);
+}
+
+.back-btn.btn-primary:focus,
+.back-btn.btn-primary:active {
+	color: #fff;
+	box-shadow: none;
 }

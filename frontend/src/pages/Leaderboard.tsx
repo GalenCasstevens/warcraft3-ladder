@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Pagination from '../components/Pagination';
+import BackButton from '../components/BackButton';
 import { IPlayer } from '../interfaces/player.interface';
 
 function Leaderboard() {
@@ -142,6 +143,7 @@ function Leaderboard() {
 	if (pageItems && pageItems !== null) {
 		return (
 			<>
+				{/* <BackButton /> */}
 				<Table striped responsive>
 					<thead>
 						<tr>
