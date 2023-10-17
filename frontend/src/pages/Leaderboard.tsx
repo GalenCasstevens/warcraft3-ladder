@@ -9,7 +9,7 @@ import Pagination from '../components/Pagination';
 import BackButton from '../components/BackButton';
 import { IPlayer } from '../interfaces/player.interface';
 
-function Leaderboard() {
+const Leaderboard = () => {
 	const { players } = useAppSelector((state) => state.players);
 	const { clans } = useAppSelector((state) => state.clans);
 	const { active } = useAppSelector((state) => state.pagination);
@@ -214,6 +214,6 @@ function Leaderboard() {
 	}
 
 	return <h1 style={{ color: '#fff' }}>An unexpected error occurred.</h1>;
-}
+};
 
 export default Leaderboard;
