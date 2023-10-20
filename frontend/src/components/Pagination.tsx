@@ -27,10 +27,6 @@ const Pagination = () => {
 		dispatch(setPageItems(players.slice(startInd, endInd)));
 	};
 
-	const onPageNumberClick = (pageNumber: number) => {
-		paginate(pageNumber);
-	};
-
 	const onFirstPageClick = () => {
 		paginate(1);
 	};
@@ -61,17 +57,17 @@ const Pagination = () => {
 		const isPageNumberLast = pageNumber === TOTAL_PAGES;
 		const isCurrentPageWithinTwoPageNumbers =
 			Math.abs(pageNumber - activePage) <= 2;
+		const isPageDivisibleByTen = pageNumber % 10 === 0;
 
 		if (
 			isPageNumberFirst ||
 			isPageNumberLast ||
 			isCurrentPageWithinTwoPageNumbers
 		) {
-			isPageNumberOutOfRange = false;
 			return (
 				<BSPagination.Item
 					key={pageNumber}
-					onClick={() => onPageNumberClick(pageNumber)}
+					onClick={() => paginate(pageNumber)}
 					active={pageNumber === activePage}
 				>
 					{pageNumber}
@@ -79,10 +75,22 @@ const Pagination = () => {
 			);
 		}
 
-		if (!isPageNumberOutOfRange) {
-			isPageNumberOutOfRange = true;
-			return <BSPagination.Ellipsis key={pageNumber} className="muted" />;
+		if (isPageDivisibleByTen) {
+			return (
+				<BSPagination.Item
+					key={pageNumber}
+					onClick={() => paginate(pageNumber)}
+					active={pageNumber === activePage}
+				>
+					{pageNumber}
+				</BSPagination.Item>
+			);
 		}
+
+		// if (!isPageNumberOutOfRange) {
+		// 	isPageNumberOutOfRange = true;
+		// 	return <BSPagination.Ellipsis key={pageNumber} className="muted" />;
+		// }
 
 		return null;
 	});
