@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import PlayerData from '../../data/PlayerData';
+import PlayerData from '../../data/PlayerDataLarge';
 
 const initialState = {
 	players: PlayerData.players,

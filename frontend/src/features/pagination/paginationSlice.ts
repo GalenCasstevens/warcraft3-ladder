@@ -2,8 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
 	pageItems: [],
-	active: 1,
+	activePage: 1,
 	TOTAL_ITEMS_PER_PAGE: 15,
+	MAX_PAGES_FOR_BASIC_PAGINATION: 10,
 };
 
 export const paginationSlice = createSlice({
@@ -13,11 +14,11 @@ export const paginationSlice = createSlice({
 		setPageItems: (state, action) => {
 			state.pageItems = action.payload;
 		},
-		setActive: (state, action) => {
-			state.active = action.payload;
+		setActivePage: (state, action) => {
+			state.activePage = action.payload;
 		},
 	},
 });
 
-export const { setPageItems, setActive } = paginationSlice.actions;
+export const { setPageItems, setActivePage } = paginationSlice.actions;
 export default paginationSlice.reducer;

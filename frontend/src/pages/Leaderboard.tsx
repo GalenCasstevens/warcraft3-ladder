@@ -12,7 +12,7 @@ import { IPlayer } from '../interfaces/player.interface';
 const Leaderboard = () => {
 	const { players } = useAppSelector((state) => state.players);
 	const { clans } = useAppSelector((state) => state.clans);
-	const { active } = useAppSelector((state) => state.pagination);
+	const { activePage } = useAppSelector((state) => state.pagination);
 	const { pageItems, TOTAL_ITEMS_PER_PAGE } = useAppSelector(
 		(state) => state.pagination
 	);
@@ -70,7 +70,7 @@ const Leaderboard = () => {
 
 	const paginatedIndex = (ind: number) => {
 		const realInd = ind + 1;
-		const paginationFactor = active - 1;
+		const paginationFactor = activePage - 1;
 		return realInd + paginationFactor * TOTAL_ITEMS_PER_PAGE;
 	};
 
