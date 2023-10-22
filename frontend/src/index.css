@@ -49,12 +49,12 @@ table {
 }
 
 .table-striped {
-	border: 1px solid #b4a300;
+	border: 1px solid #cba300;
 }
 
 .table-striped th {
 	background-color: #2e2d2b;
-	color: #b4a300;
+	color: #cba300;
 	text-align: center;
 	border: none;
 }
@@ -81,7 +81,7 @@ table {
 
 td.player-name-col,
 td.clan-col {
-	color: #b4a300;
+	color: #cba300;
 }
 
 .table-striped > tbody > tr:nth-child(2n + 1) > td,
@@ -155,8 +155,7 @@ td.icon-img-cell {
 
 .leaderboard-player-name,
 .leaderboard-clan-name {
-	color: #b4a300;
-	text-decoration: none;
+	color: #cba300;
 }
 
 .leaderboard-player-name:hover,
@@ -167,8 +166,7 @@ td.icon-img-cell {
 .back-btn {
 	background-image: linear-gradient(#408dff, #0d6efd);
 	color: #fff;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 35px;
 }
 
 .back-btn.btn-primary:hover {
@@ -180,4 +178,55 @@ td.icon-img-cell {
 .back-btn.btn-primary:active {
 	color: #fff;
 	box-shadow: none;
+}
+
+.profile-container {
+	margin-top: 35px;
+	color: #fff;
+}
+
+.profile-img {
+	width: 100%;
+	border: #cba300 1px solid;
+}
+
+.profile-name-col > .row > * {
+	padding-left: 0px;
+}
+
+.profile-name-col {
+	margin-top: 35px;
+}
+
+.profile-name-label {
+	line-height: 0px;
+	font-weight: 600;
+	font-size: 0.9em;
+	color: #7d8085;
+}
+
+.profile-name {
+	line-height: 10px;
+	font-size: 1.15em;
+	font-weight: 600px;
+}
+
+.profile-clan-label {
+	margin-top: 15px;
+	font-weight: 600;
+	line-height: 0px;
+	font-size: 0.9em;
+	color: #7d8085;
+}
+
+.profile-clan {
+	line-height: 10px;
+	font-size: 1.15em;
+	color: #cb9f40;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.profile-clan:hover {
+	color: #fff;
 }

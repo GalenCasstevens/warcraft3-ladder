@@ -3,22 +3,20 @@ const ClanData = {
 		{
 			_id: '652739f913c54ed27f140c9a',
 			name: 'RiZE',
+			fullName: 'RiZE Nation',
 			players: [
-				{
-					playerId: '6521dc03abaa082114cfd55b',
-					role: 'grunt',
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
-					playerId: '6522d9042ef17425ee4e4b33',
-					role: 'shaman',
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
 				{
 					playerId: '6522db28ca04effaba3f19aa',
 					role: 'chieftain',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
+
+				{
+					playerId: '6522d9042ef17425ee4e4b33',
+					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+
 				{
 					playerId: '6522db308d632cbf7f064a73',
 					role: 'shaman',
@@ -27,6 +25,21 @@ const ClanData = {
 				{
 					playerId: '6522dd7fdf6c60653124b2ea',
 					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65235c722b8f2bf022664d60',
+					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '6522ddb33cfb3a806ebd39a0',
+					role: 'grunt',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '6521dc03abaa082114cfd55b',
+					role: 'grunt',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
@@ -40,13 +53,8 @@ const ClanData = {
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
-					playerId: '6522ddb33cfb3a806ebd39a0',
-					role: 'shaman',
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
-					playerId: '65235c722b8f2bf022664d60',
-					role: 'shaman',
+					playerId: '65325b41fc13ae6f99c76aae',
+					role: 'grunt',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -119,22 +127,17 @@ const ClanData = {
 			name: 'AsiA',
 			players: [
 				{
-					playerId: '6522dd99fe5b15dd02923685',
-					role: 'shaman',
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
 					playerId: '6522dd9d882d8e62069abe7b',
 					role: 'chieftain',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
-					playerId: '6522ddace06e9cc8fad71ba5',
+					playerId: '6522dd99fe5b15dd02923685',
 					role: 'shaman',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
-					playerId: '6522ddb33cfb3a806ebd39a0',
+					playerId: '6522ddace06e9cc8fad71ba5',
 					role: 'shaman',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
@@ -200,6 +203,21 @@ const ClanData = {
 					role: 'shaman',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
+				{
+					playerId: '65325c8afc13ae7264c76a34',
+					role: 'grunt',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325c8afc13ae7264c76a33',
+					role: 'grunt',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325c8afc13ae7264c76a1f',
+					role: 'grunt',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
 			],
 		},
 		{
@@ -209,6 +227,53 @@ const ClanData = {
 				{
 					playerId: '65272f955c073f557fd28a65',
 					role: 'chieftain',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325c8afc13ae7264c76a22',
+					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+			],
+		},
+		{
+			_id: '65330e5c1083e5ce554c5a11',
+			name: 'StaR',
+			players: [
+				{
+					playerId: '65325c8afc13ae7264c76a16',
+					role: 'chieftain',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325c8afc13ae7264c76a14',
+					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c769a7',
+					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+			],
+		},
+		{
+			_id: '65330e962d3846006b1bf64e',
+			name: '2eZ',
+			players: [
+				{
+					playerId: '65325c8afc13ae7264c76a3c',
+					role: 'chieftain',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325c8afc13ae7264c76a10',
+					role: 'shaman',
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325c8afc13ae7264c76a17',
+					role: 'shaman',
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],

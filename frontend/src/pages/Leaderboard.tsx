@@ -188,7 +188,7 @@ const Leaderboard = () => {
 								<td className="icon-img-cell align-middle">
 									<img
 										className="icon-img"
-										src={require(`../assets/${player.icon}`)}
+										src={require(`../assets/icons/${player.icon}-icon.webp`)}
 									/>
 								</td>
 								<td className="player-name-col" colSpan={2}>
