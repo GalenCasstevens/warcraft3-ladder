@@ -86,11 +86,6 @@ const Pagination = () => {
 			);
 		}
 
-		// if (!isPageNumberOutOfRange) {
-		// 	isPageNumberOutOfRange = true;
-		// 	return <BSPagination.Ellipsis key={pageNumber} className="muted" />;
-		// }
-
 		return null;
 	});
 
