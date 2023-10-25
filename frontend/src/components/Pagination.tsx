@@ -15,7 +15,6 @@ const Pagination = () => {
 	const isCurrentPageFirst = activePage === 1;
 	const isCurrentPageLast = activePage === TOTAL_PAGES;
 	let isPageNumberOutOfRange: boolean;
-	let items = [];
 
 	const dispatch = useAppDispatch();
 

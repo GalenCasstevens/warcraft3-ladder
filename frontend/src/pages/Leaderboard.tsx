@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Pagination from '../components/Pagination';
-import BackButton from '../components/BackButton';
 import { IPlayer } from '../interfaces/player.interface';
 
 const Leaderboard = () => {
@@ -25,9 +24,9 @@ const Leaderboard = () => {
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		const tempPlayers = players.slice();
-		dispatch(setPlayers(tempPlayers.sort(compareXp)));
-		dispatch(setPageItems(tempPlayers.slice(0, TOTAL_ITEMS_PER_PAGE)));
+		const sortedPlayers = players.slice().sort(compareXp);
+		dispatch(setPlayers(sortedPlayers));
+		dispatch(setPageItems(sortedPlayers.slice(0, TOTAL_ITEMS_PER_PAGE)));
 	}, [dispatch]);
 
 	const compareXp = (player1: IPlayer, player2: IPlayer) => {
