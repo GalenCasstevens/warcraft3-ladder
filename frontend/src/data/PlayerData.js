@@ -43,7 +43,7 @@ const PlayerData = {
 			losses: 129,
 		},
 		{
-			_id: '6522d9042ef17425ee4e4b33',
+			_id: '6522d90423f17425ee4e4b33',
 			icon: 'dott',
 			name: 'Ace',
 			wins: 1026,

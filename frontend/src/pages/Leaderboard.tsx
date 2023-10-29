@@ -25,9 +25,9 @@ const Leaderboard = () => {
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		const sortedPlayers = players.slice().sort(compareXp);
+		const sortedPlayers = players?.slice().sort(compareXp);
 		dispatch(setPlayers(sortedPlayers));
-		dispatch(setPageItems(sortedPlayers.slice(0, TOTAL_ITEMS_PER_PAGE)));
+		dispatch(setPageItems(sortedPlayers?.slice(0, TOTAL_ITEMS_PER_PAGE)));
 	}, [dispatch]);
 
 	const compareXp = (player1: IPlayer, player2: IPlayer) => {
