@@ -11,7 +11,7 @@ const Pagination = () => {
 	const { activePage, TOTAL_ITEMS_PER_PAGE } = useAppSelector(
 		(state) => state.pagination
 	);
-	const TOTAL_PAGES = Math.ceil(players?.length ?? 0 / TOTAL_ITEMS_PER_PAGE);
+	const TOTAL_PAGES = Math.ceil((players?.length ?? 0) / TOTAL_ITEMS_PER_PAGE);
 	const isCurrentPageFirst = activePage === 1;
 	const isCurrentPageLast = activePage === TOTAL_PAGES;
 	let isPageNumberOutOfRange: boolean;
