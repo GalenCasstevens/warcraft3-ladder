@@ -1,3 +1,4 @@
+import { ClanRank } from '../enums/clanRank.enum';
 const ClanData = {
 	clans: [
 		{
@@ -7,54 +8,54 @@ const ClanData = {
 			players: [
 				{
 					playerId: '6522db28ca04effaba3f19aa',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 
 				{
 					playerId: '6522d9042ef17425ee4e4b33',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 
 				{
 					playerId: '6522db308d632cbf7f064a73',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522dd7fdf6c60653124b2ea',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65235c722b8f2bf022664d60',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522ddb33cfb3a806ebd39a0',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6521dc03abaa082114cfd55b',
-					role: 'grunt',
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
-					playerId: '6522d9042ef17425ee4e4b33',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522dd85636935de9579263d',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325b41fc13ae6f99c76aae',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '6522d90423f17425ee4e4b33',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -62,25 +63,26 @@ const ClanData = {
 		{
 			_id: '65273d4db4c2877f92fb1d43',
 			name: 'AiR',
+			fullName: 'Air Jordan 23',
 			players: [
 				{
 					playerId: '6522dd8cf5aaced892b1b407',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65273dd5ed594cff497cbba7',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522ddb00d22cc7400c7d423',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525fab6047bdf2a384586b2',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -91,17 +93,17 @@ const ClanData = {
 			players: [
 				{
 					playerId: '6522dd9213feb41735cded5d',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525faf44c77c295493d9eb0',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65272f9b28974b6cec647ed4',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -112,12 +114,12 @@ const ClanData = {
 			players: [
 				{
 					playerId: '6522dd96cbbed433383efe8d',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522dda44f2c1b00ee22cf1b',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -128,17 +130,17 @@ const ClanData = {
 			players: [
 				{
 					playerId: '6522dd9d882d8e62069abe7b',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522dd99fe5b15dd02923685',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522ddace06e9cc8fad71ba5',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -149,27 +151,27 @@ const ClanData = {
 			players: [
 				{
 					playerId: '65235e697d95835d48da11c0',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '652362717bceeccf939ac0d1',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525fab0f339eaf16ddce8d4',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525fab6047bdf2a384586b2',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525faca377645f6e7112a91',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -180,42 +182,42 @@ const ClanData = {
 			players: [
 				{
 					playerId: '6525fac1c73b9d781ec16328',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525fac393095f9ec28e9bd3',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525fac8e78625ba7a0ac449',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6525fb49e7e47caf0200f6a6',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65272f97980f4e3eb7bd2ff0',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a34',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a33',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a1f',
-					role: 'grunt',
+					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -226,12 +228,12 @@ const ClanData = {
 			players: [
 				{
 					playerId: '65272f955c073f557fd28a65',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a22',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -242,17 +244,17 @@ const ClanData = {
 			players: [
 				{
 					playerId: '65325c8afc13ae7264c76a16',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a14',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325b41fc13ae6f99c769a7',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],
@@ -263,17 +265,17 @@ const ClanData = {
 			players: [
 				{
 					playerId: '65325c8afc13ae7264c76a3c',
-					role: 'chieftain',
+					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a10',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a17',
-					role: 'shaman',
+					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 			],

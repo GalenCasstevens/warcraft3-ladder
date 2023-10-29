@@ -128,7 +128,7 @@ const Leaderboard = () => {
 					</thead>
 					<tbody>
 						{pageItems.map((player: IPlayer, ind: number) => (
-							<tr>
+							<tr className="leaderboard-content-row">
 								<td>{ordinalSuffixOf(paginatedIndex(ind))}</td>
 								<td className="align-middle">
 									<div className="level-container">

@@ -5,6 +5,7 @@
 
 body {
 	background-color: #000;
+	color: #fff;
 }
 
 table {
@@ -57,14 +58,33 @@ sup.sup-profile-rank:hover {
 	width: 100px;
 }
 
-table.table-striped.leaderboard {
-	border: 1px solid #cba300;
+table.table-striped.leaderboard,
+table.clan-table {
+	border-top: 3px solid #171717;
+	border-left: 1px solid #cba300;
+	border-right: 1px solid #cba300;
+	border-bottom: 1px solid #cba300;
 }
 
-.table-striped.leaderboard th {
+.leaderboard thead tr,
+.clan-table thead tr {
+	border-bottom: 1px solid #1e1d1c;
+}
+
+.table-striped.leaderboard th,
+.clan-table th {
 	background-color: #2e2d2b;
 	color: #cba300;
 	text-align: center;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+	border-right: 1px solid #5d5d5d;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-striped.leaderboard th:last-of-type,
+.clan-table th:last-of-type {
 	border: none;
 }
 
@@ -76,15 +96,27 @@ table.table-striped.leaderboard {
 	color: #fff;
 }
 
-.table-striped.leaderboard tr td {
+.clan-table td {
 	border: none;
 }
 
-.table-striped.leaderboard tr td:not(.player-name-col, .clan-col) {
+.table-striped.leaderboard tr.leaderboard-content-row,
+.clan-table tr {
+	border-bottom: 1px solid #000;
+}
+
+.leaderboard tr.leaderboard-content-row:last-of-type,
+.clan-table tr.clan-content-row:last-of-type {
+	border-bottom: 1px solid #cba300;
+}
+
+.table-striped.leaderboard tr td:not(.player-name-col, .clan-col),
+.clan-table tr td {
 	color: #fff;
 }
 
-.table-striped.leaderboard tr td:not(.player-name-col) {
+.table-striped.leaderboard tr td:not(.player-name-col),
+.clan-table tr td {
 	text-align: center;
 }
 
@@ -94,7 +126,8 @@ td.clan-col {
 }
 
 .table-striped.leaderboard > tbody > tr:nth-child(2n + 1) > td,
-.table-striped.leaderboard > tbody > tr:nth-child(2n + 1) > th {
+.table-striped.leaderboard > tbody > tr:nth-child(2n + 1) > th,
+.clan-table > tbody > tr:nth-child(2n + 1) > td {
 	background-color: #271a13;
 }
 
@@ -120,6 +153,10 @@ td.icon-img-cell {
 
 .icon-img {
 	width: 30%;
+}
+
+td.clan-icon-img-rank-cell {
+	padding: 0px;
 }
 
 .level-container {
@@ -195,7 +232,6 @@ td.icon-img-cell {
 
 .profile-container {
 	margin-top: 33.94165px;
-	color: #fff;
 }
 
 .profile-img {
@@ -487,6 +523,49 @@ hr {
 
 .profile-at-main-row:last-of-type {
 	border-bottom: none;
+}
+
+.clan-back-btn-col {
+	padding-bottom: 33.94165px;
+}
+
+.clan-page-container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.clan-table {
+	margin-top: 0px;
+}
+
+.clan-page-title {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin-top: 63.5px;
+	margin-right: 20px;
+}
+
+.clan-page-title-label {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-top: 15px;
+	line-height: 0px;
+	font-weight: 600;
+	font-size: 1.1em;
+	color: #7d8085;
+}
+
+.clan-icon-img {
+	width: 45px;
+}
+
+.vertically-align-container {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.clan-table td.clan-player-name-table-cell,
+.clan-table td.clan-join-date-table-cell {
+	padding-left: 40px;
 }
 
 @media screen and (max-width: 1200px) {
