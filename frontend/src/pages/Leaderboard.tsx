@@ -12,10 +12,8 @@ import { ordinalSuffixOf } from '../helpers/Utils';
 const Leaderboard = () => {
 	const { players } = useAppSelector((state) => state.players);
 	const { clans } = useAppSelector((state) => state.clans);
-	const { activePage } = useAppSelector((state) => state.pagination);
-	const { pageItems, TOTAL_ITEMS_PER_PAGE } = useAppSelector(
-		(state) => state.pagination
-	);
+	const { activePage, pageItems, TOTAL_ITEMS_PER_PAGE, startInd, endInd } =
+		useAppSelector((state) => state.pagination);
 	const XP_PROGRESS_FACTOR = 0.22;
 	const XP_GAINED_ON_WIN_FACTOR = 100;
 	const XP_LOST_ON_LOSE_FACTOR = 25;
@@ -27,7 +25,7 @@ const Leaderboard = () => {
 	useEffect(() => {
 		const sortedPlayers = players?.slice().sort(compareXp);
 		dispatch(setPlayers(sortedPlayers));
-		dispatch(setPageItems(sortedPlayers?.slice(0, TOTAL_ITEMS_PER_PAGE)));
+		dispatch(setPageItems(sortedPlayers?.slice(startInd, endInd)));
 	}, [dispatch]);
 
 	const compareXp = (player1: IPlayer, player2: IPlayer) => {
@@ -113,7 +111,6 @@ const Leaderboard = () => {
 	if (pageItems && pageItems !== null) {
 		return (
 			<>
-				{/* <BackButton /> */}
 				<Table className="leaderboard" striped responsive>
 					<thead>
 						<tr>

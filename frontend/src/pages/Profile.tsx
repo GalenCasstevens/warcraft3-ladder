@@ -7,10 +7,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import { IPlayer } from '../interfaces/player.interface';
 
 const Profile: React.FC = () => {
 	const { player } = useAppSelector((state) => state.players);
+	const { clans } = useAppSelector((state) => state.clans);
 	const { playerId } = useParams();
 
 	const dispatch = useAppDispatch();
@@ -18,6 +18,15 @@ const Profile: React.FC = () => {
 	useEffect(() => {
 		dispatch(getPlayer(playerId));
 	}, [dispatch, playerId]);
+
+	const getPlayerClan = (playerId: string) => {
+		let clanName = '';
+		clans.map((clan) => {
+			if (clan.players.some((player) => player.playerId === playerId))
+				clanName = clan.name;
+		});
+		return clanName;
+	};
 
 	if (player || player !== null) {
 		return (
@@ -30,19 +39,23 @@ const Profile: React.FC = () => {
 								<Col md={6}>
 									<img
 										className="profile-img"
-										src={require(`../assets/profile-img/jaina-profile.gif`)}
+										src={require(`../assets/profile-img/${
+											player?.icon ?? 'peon'
+										}-profile.gif`)}
 									/>
 								</Col>
 								<Col className="profile-name-col" md={6}>
 									<div className="profile-name-container">
 										<Row>
 											<p className="profile-info-label">Player Name:</p>
-											<p className="profile-info-value">Trinity</p>
+											<p className="profile-info-value">{player?.name}</p>
 										</Row>
 										<Row>
 											<p className="profile-info-label">Clan Name:</p>
 											<p className="profile-info-value">
-												<span className="profile-clan">RiZE</span>
+												<span className="profile-clan">
+													{getPlayerClan(player?._id ?? '')}
+												</span>
 											</p>
 										</Row>
 									</div>
@@ -52,13 +65,13 @@ const Profile: React.FC = () => {
 								<Row>
 									<p className="profile-info-label">Homepage:</p>
 									<p className="profile-info-value">
-										www.sickreplays.com/trinity
+										www.sickreplays.com/{player?.name.toLowerCase()}
 									</p>
 								</Row>
 								<Row>
 									<p className="profile-info-label">Additional Information:</p>
 									<p className="profile-info-value">
-										Lessons for $100/hr - paypal: @trinity
+										Lessons for $100/hr - paypal: @{player?.name.toLowerCase()}
 									</p>
 								</Row>
 								<Row>

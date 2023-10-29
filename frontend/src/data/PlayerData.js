@@ -128,7 +128,7 @@ const PlayerData = {
 			losses: 164,
 		},
 		{
-			_id: '6522ddb33cfb3a806ebd39a0',
+			_id: '6522d5b33cfb3a806ebd39a0',
 			icon: 'crypt-fiend',
 			name: 'HELLOTHERE',
 			wins: 1831,

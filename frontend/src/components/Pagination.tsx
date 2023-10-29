@@ -3,6 +3,8 @@ import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {
 	setPageItems,
 	setActivePage,
+	setStartInd,
+	setEndInd,
 } from '../features/pagination/paginationSlice';
 import BSPagination from 'react-bootstrap/Pagination';
 
@@ -22,6 +24,8 @@ const Pagination = () => {
 		if (activePage === currentPage) return;
 		const startInd = (currentPage - 1) * TOTAL_ITEMS_PER_PAGE;
 		const endInd = currentPage * TOTAL_ITEMS_PER_PAGE;
+		dispatch(setStartInd(startInd));
+		dispatch(setEndInd(endInd));
 		dispatch(setActivePage(currentPage));
 		dispatch(setPageItems(players?.slice(startInd, endInd)));
 	};
