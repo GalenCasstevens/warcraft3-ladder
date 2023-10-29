@@ -7,6 +7,7 @@ import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Pagination from '../components/Pagination';
 import { IPlayer } from '../interfaces/player.interface';
+import { ordinalSuffixOf } from '../helpers/Utils';
 
 const Leaderboard = () => {
 	const { players } = useAppSelector((state) => state.players);
@@ -35,36 +36,6 @@ const Leaderboard = () => {
 		if (p1Xp > p2Xp) return -1;
 		if (p1Xp < p2Xp) return 1;
 		return 0;
-	};
-
-	const ordinalSuffixOf = (n: number) => {
-		var j = n % 10;
-		var k = n % 100;
-		if (j == 1 && k != 11)
-			return (
-				<>
-					{n}
-					<sup>st</sup>
-				</>
-			);
-		if (j == 2 && k != 12)
-			return (
-				<>
-					{n}
-					<sup>nd</sup>
-				</>
-			);
-		if (j == 3 && k != 13)
-			<>
-				{n}
-				<sup>rd</sup>
-			</>;
-		return (
-			<>
-				{n}
-				<sup>th</sup>
-			</>
-		);
 	};
 
 	const paginatedIndex = (ind: number) => {
@@ -143,7 +114,7 @@ const Leaderboard = () => {
 		return (
 			<>
 				{/* <BackButton /> */}
-				<Table striped responsive>
+				<Table className="leaderboard" striped responsive>
 					<thead>
 						<tr>
 							<th>Rank</th>
