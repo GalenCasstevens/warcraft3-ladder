@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
+import React from 'react';
+import { useAppSelector } from '../app/hooks';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 import Table from 'react-bootstrap/Table';
 import Row from 'react-bootstrap/Row';
@@ -82,7 +83,14 @@ const Clan: React.FC = () => {
 										</Row>
 									</td>
 									<td className="clan-player-name-table-cell align-middle">
-										<span className="float-start">{member.name}</span>
+										<span className="float-start">
+											<Link
+												className="clan-player-name"
+												to={`../players/${member._id}`}
+											>
+												{member.name}
+											</Link>
+										</span>
 									</td>
 									<td className="clan-join-date-table-cell align-middle">
 										<span className="float-start">

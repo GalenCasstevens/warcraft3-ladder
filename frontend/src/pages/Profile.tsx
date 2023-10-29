@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import { useParams } from 'react-router-dom';
 import { getPlayer } from '../features/players/playerSlice';
+import { getClanId } from '../features/clans/clanSlice';
+import { Link } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,13 +12,14 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const Profile: React.FC = () => {
 	const { player } = useAppSelector((state) => state.players);
-	const { clans } = useAppSelector((state) => state.clans);
+	const { clans, clanId } = useAppSelector((state) => state.clans);
 	const { playerId } = useParams();
 
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		dispatch(getPlayer(playerId));
+		dispatch(getClanId(getPlayerClan(playerId ?? '')));
 	}, [dispatch, playerId]);
 
 	const getPlayerClan = (playerId: string) => {
@@ -53,8 +56,13 @@ const Profile: React.FC = () => {
 										<Row>
 											<p className="profile-info-label">Clan Name:</p>
 											<p className="profile-info-value">
-												<span className="profile-clan">
-													{getPlayerClan(player?._id ?? '')}
+												<span>
+													<Link
+														className="profile-clan"
+														to={`../clans/${clanId}`}
+													>
+														{getPlayerClan(player?._id ?? '')}
+													</Link>
 												</span>
 											</p>
 										</Row>

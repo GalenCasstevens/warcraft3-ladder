@@ -204,7 +204,8 @@ td.clan-icon-img-rank-cell {
 }
 
 .leaderboard-player-name,
-.leaderboard-clan-name {
+.leaderboard-clan-name,
+.clan-player-name {
 	color: #cba300;
 }
 
@@ -262,11 +263,7 @@ td.clan-icon-img-rank-cell {
 }
 
 .profile-clan {
-	line-height: 10px;
-	font-size: 1.15em;
 	color: #cb9f40;
-	font-weight: 600;
-	text-decoration: underline;
 }
 
 .profile-at-rank-container {

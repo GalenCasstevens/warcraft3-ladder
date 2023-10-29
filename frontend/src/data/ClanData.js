@@ -90,6 +90,7 @@ const ClanData = {
 		{
 			_id: '65273e01136232816d6d36de',
 			name: 'CaSh',
+			fullName: 'Cash Money',
 			players: [
 				{
 					playerId: '6522dd9213feb41735cded5d',
@@ -111,6 +112,7 @@ const ClanData = {
 		{
 			_id: '65274796ada2083a417beb4d',
 			name: '4K',
+			fullName: '4Kings',
 			players: [
 				{
 					playerId: '6522dd96cbbed433383efe8d',
@@ -127,6 +129,7 @@ const ClanData = {
 		{
 			_id: '652747ccf151c332b6d839a1',
 			name: 'AsiA',
+			fullName: 'Asia Ownz',
 			players: [
 				{
 					playerId: '6522dd9d882d8e62069abe7b',
@@ -148,6 +151,7 @@ const ClanData = {
 		{
 			_id: '652748b87e86e60c68c76c43',
 			name: 'MYM',
+			fullName: 'Meet Your Makers',
 			players: [
 				{
 					playerId: '65235e697d95835d48da11c0',
@@ -179,6 +183,7 @@ const ClanData = {
 		{
 			_id: '65274904a2f4550141c5b284',
 			name: 'TeK9',
+			fullName: 'TeK-9 Gaming',
 			players: [
 				{
 					playerId: '6525fac1c73b9d781ec16328',
@@ -225,6 +230,7 @@ const ClanData = {
 		{
 			_id: '65274a2744ff2afaf207e18c',
 			name: 'GGL',
+			fullName: 'Good Game Losers',
 			players: [
 				{
 					playerId: '65272f955c073f557fd28a65',
@@ -241,6 +247,7 @@ const ClanData = {
 		{
 			_id: '65330e5c1083e5ce554c5a11',
 			name: 'StaR',
+			fullName: 'STAR',
 			players: [
 				{
 					playerId: '65325c8afc13ae7264c76a16',
@@ -262,6 +269,7 @@ const ClanData = {
 		{
 			_id: '65330e962d3846006b1bf64e',
 			name: '2eZ',
+			fullName: '2EZ Gaming',
 			players: [
 				{
 					playerId: '65325c8afc13ae7264c76a3c',
