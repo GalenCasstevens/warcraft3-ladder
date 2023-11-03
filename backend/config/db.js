@@ -6,17 +6,6 @@ const connUri = {
 	password: process.env.MYSQL_PASSWORD,
 	database: process.env.MYSQL_DATABASE,
 };
+pool = mysql.createPool(connUri).promise();
 
-const pool = mysql.createPool(connUri).promise();
-
-const getPlayers = async () => {
-	const [rows] = await pool.query('SELECT * FROM players');
-	return rows;
-};
-
-let players;
-(async () => {
-	players = await getPlayers();
-	console.log(players);
-})();
-console.log(players);
+module.exports = pool;

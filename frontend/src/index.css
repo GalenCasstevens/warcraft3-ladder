@@ -294,11 +294,12 @@ td.clan-icon-img-rank-cell {
 
 .profile-info-label {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	margin-top: 15px;
+	margin-top: 13px;
 	line-height: 0px;
 	font-weight: 500;
 	font-size: 1em;
 	color: #7d8085;
+	margin-bottom: 10px;
 }
 
 #profile-hr {
@@ -306,23 +307,14 @@ td.clan-icon-img-rank-cell {
 }
 
 .profile-info-value {
-	line-height: 10px;
+	line-height: 19px;
 	font-weight: 600;
-	margin-bottom: 9px;
+	margin-bottom: 5px;
 }
 
 .profile-breakdown-label {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	line-height: 17px;
-	font-weight: 500;
-	font-size: 1em;
-	color: #7d8085;
-	margin-bottom: 0px;
-}
-
-.profile-at-label {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	line-height: 17px;
+	line-height: 20px;
 	font-weight: 500;
 	font-size: 1em;
 	color: #7d8085;
@@ -335,10 +327,39 @@ td.clan-icon-img-rank-cell {
 	margin-bottom: 0px;
 }
 
+.profile-at-label {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	line-height: 17px;
+	font-weight: 500;
+	font-size: 1em;
+	color: #7d8085;
+	margin-bottom: 0px;
+}
+
+.profile-at-partners-label {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	line-height: 17px;
+	font-weight: 500;
+	font-size: 1em;
+	color: #7d8085;
+	margin-bottom: 3px;
+	text-align: left;
+}
+
 .profile-at-value {
 	line-height: 17px;
 	font-weight: 600;
 	margin-bottom: 0px;
+}
+
+.profile-at-partners-value {
+	line-height: 17px;
+	font-weight: 600;
+	margin-bottom: 0px;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .profile-breakdown-rank-container {
@@ -350,15 +371,12 @@ td.clan-icon-img-rank-cell {
 	margin-bottom: 0px;
 }
 
-.profile-stats {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
 .table-striped.profile-stats {
 	border: 1px solid #5a5a5a;
 	color: #fff;
 	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
 
 table.profile-stats > tr:not(.profile-stats-total),
@@ -443,7 +461,7 @@ td.profile-stats-content {
 .profile-at-container {
 	background-image: url('../src/assets/wood-repeat-darkened.png');
 	background-repeat: repeat-y;
-	border: 2px solid #5a5a5a;
+	border: 2px solid #5a5a5a !important;
 	height: 100%;
 	width: 100%;
 	font-family: arial, helvetica, sans-serif;
@@ -460,6 +478,12 @@ td.profile-stats-content {
 	border-bottom: 5px solid #000;
 	padding-left: 20px;
 	padding-right: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.profile-breakdown-main-row {
+	padding-bottom: 5px;
 }
 
 .profile-at-main-row {
@@ -472,6 +496,8 @@ td.profile-stats-content {
 
 .profile-breakdown-xp-decay {
 	margin-bottom: 3px;
+	text-align: left;
+	font-size: 0.97em;
 }
 
 .breakdown-header {

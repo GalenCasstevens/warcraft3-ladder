@@ -231,14 +231,12 @@ const Profile: React.FC = () => {
 												</Row>
 												<Row>
 													<p className="profile-breakdown-xp-decay">
-														<span className="profile">
-															<span className="profile-breakdown-label">
-																XP decay
-																<span className="responsive-remove"> in</span>:
-															</span>{' '}
-															<span className="profile-breakdown-value">
-																8 days
-															</span>
+														<span className="profile-breakdown-label">
+															XP decay
+															<span className="responsive-remove"> in</span>:
+														</span>{' '}
+														<span className="profile-breakdown-value">
+															8 days
 														</span>
 													</p>
 												</Row>
@@ -398,12 +396,12 @@ const Profile: React.FC = () => {
 											</Row>
 											<Row className="profile-at-partners-rank-row">
 												<Col>
-													<div className="float-start">
-														<p className="profile-at-label">Partner(s):</p>
-														<p className="profile-at-value profile-partners float-start">
-															Solar
-														</p>
-													</div>
+													<p className="profile-at-partners-label">
+														Partner(s):
+													</p>
+													<p className="profile-at-partners-value profile-partners">
+														Solar
+													</p>
 												</Col>
 												<Col>
 													<div className="profile-at-rank-container">
@@ -458,15 +456,15 @@ const Profile: React.FC = () => {
 												</Col>
 											</Row>
 											<Row className="profile-at-partners-rank-row">
-												<Col>
-													<div className="float-start">
-														<p className="profile-at-label">Partner(s):</p>
-														<p className="profile-at-value profile-partners float-start">
-															Phoniex_Rize
-														</p>
-													</div>
+												<Col xs={6}>
+													<p className="profile-at-partners-label">
+														Partner(s):
+													</p>
+													<p className="profile-at-partners-value profile-partners">
+														WWWWWWWWWWWWWWW
+													</p>
 												</Col>
-												<Col>
+												<Col xm={6}>
 													<div className="profile-at-rank-container">
 														<p className="profile-at-label">Rank:</p>
 														<p className="profile-rank">
@@ -520,12 +518,12 @@ const Profile: React.FC = () => {
 											</Row>
 											<Row className="profile-at-partners-rank-row">
 												<Col>
-													<div className="float-start">
-														<p className="profile-at-label">Partner(s):</p>
-														<p className="profile-at-value profile-partners float-start">
-															Galen
-														</p>
-													</div>
+													<p className="profile-at-partners-label">
+														Partner(s):
+													</p>
+													<p className="profile-at-partners-value profile-partners">
+														Galen
+													</p>
 												</Col>
 												<Col>
 													<div className="profile-at-rank-container">
@@ -581,12 +579,12 @@ const Profile: React.FC = () => {
 											</Row>
 											<Row className="profile-at-partners-rank-row">
 												<Col>
-													<div className="float-start">
-														<p className="profile-at-label">Partner(s):</p>
-														<p className="profile-at-value profile-partners float-start">
-															Vergil
-														</p>
-													</div>
+													<p className="profile-at-partners-label">
+														Partner(s):
+													</p>
+													<p className="profile-at-partners-value profile-partners">
+														Vergil
+													</p>
 												</Col>
 												<Col>
 													<div className="profile-at-rank-container">
@@ -640,12 +638,12 @@ const Profile: React.FC = () => {
 											</Row>
 											<Row className="profile-at-partners-rank-row">
 												<Col>
-													<div className="float-start">
-														<p className="profile-at-label">Partner(s):</p>
-														<p className="profile-at-value profile-partners float-start">
-															Alina
-														</p>
-													</div>
+													<p className="profile-at-partners-label">
+														Partner(s):
+													</p>
+													<p className="profile-at-partners-value profile-partners">
+														Alina
+													</p>
 												</Col>
 												<Col>
 													<div className="profile-at-rank-container">
@@ -699,12 +697,12 @@ const Profile: React.FC = () => {
 											</Row>
 											<Row className="profile-at-partners-rank-row">
 												<Col>
-													<div className="float-start">
-														<p className="profile-at-label">Partner(s):</p>
-														<p className="profile-at-value profile-partners float-start">
-															Focus
-														</p>
-													</div>
+													<p className="profile-at-partners-label">
+														Partner(s):
+													</p>
+													<p className="profile-at-partners-value profile-partners">
+														Focus
+													</p>
 												</Col>
 												<Col>
 													<div className="profile-at-rank-container">
