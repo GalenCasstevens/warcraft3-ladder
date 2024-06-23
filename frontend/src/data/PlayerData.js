@@ -31,7 +31,7 @@ const PlayerData = {
 		{
 			_id: '6522db308d632cbf7f064a73',
 			icon: 'infernal',
-			name: 'Legacy',
+			name: 'SurGe',
 			wins: 1544,
 			losses: 281,
 		},

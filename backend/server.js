@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/players', require('./routes/playerRoutes'));
 
+// no point starting Express server if we cannot connect to the database
 db.query('SELECT 1')
 	.then(() => {
 		console.log(`MySQL Connected: ${process.env.MYSQL_HOST}`.cyan.underline);
