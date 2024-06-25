@@ -3,8 +3,8 @@ const PlayerData = {
 		{
 			_id: '6521dc03abaa082114cfd55b',
 			icon: 'infernal',
-			name: 'Galen',
-			wins: 256,
+			name: 'TheLSDJ',
+			wins: 1400,
 			losses: 15,
 		},
 		{
@@ -17,7 +17,7 @@ const PlayerData = {
 		{
 			_id: '6522db28ca04effaba3f19aa',
 			icon: 'doom-guard',
-			name: 'Solar',
+			name: 'EthericGhost',
 			wins: 1844,
 			losses: 124,
 		},
@@ -137,7 +137,7 @@ const PlayerData = {
 		{
 			_id: '6522ddb33cfb3a806ebd39a0',
 			icon: 'archimonde',
-			name: 'Vergil',
+			name: 'RedDrips',
 			wins: 1592,
 			losses: 65,
 		},
@@ -2432,7 +2432,7 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76aae',
-			icon: 'infernal',
+			icon: 'dark-ranger',
 			name: 'Alina',
 			wins: 1647,
 			losses: 245,
@@ -2642,10 +2642,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76acc',
-			icon: 'peon',
-			name: 'pabys8e',
-			wins: 908,
-			losses: 335,
+			icon: 'dryad',
+			name: 'Mamabella',
+			wins: 1232,
+			losses: 23,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76acd',
@@ -2867,16 +2867,16 @@ const PlayerData = {
 		{
 			_id: '65325b41fc13ae6f99c76aec',
 			icon: 'peon',
-			name: 'sstapford9a',
-			wins: 649,
-			losses: 927,
+			name: 'CaptainMelody',
+			wins: 1567,
+			losses: 34,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76aed',
 			icon: 'peon',
-			name: 'mlimbrick9b',
-			wins: 14,
-			losses: 382,
+			name: 'Ekjaan',
+			wins: 1247,
+			losses: 58,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76aee',
@@ -3125,10 +3125,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b11',
-			icon: 'peon',
-			name: 'jbridatab',
-			wins: 389,
-			losses: 895,
+			icon: 'archimonde',
+			name: 'Astro',
+			wins: 1844,
+			losses: 3,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b12',
@@ -3209,10 +3209,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b1d',
-			icon: 'rifleman',
-			name: 'Unique',
-			wins: 71,
-			losses: 792,
+			icon: 'infernal',
+			name: 'dancealive',
+			wins: 800,
+			losses: 10,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b1e',
@@ -3265,10 +3265,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b25',
-			icon: 'peon',
-			name: 'lradbandav',
-			wins: 697,
-			losses: 18,
+			icon: 'naga-myrmidon',
+			name: 'TomDaBrotha',
+			wins: 1245,
+			losses: 73,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b26',
@@ -3293,10 +3293,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b29',
-			icon: 'peon',
-			name: 'fingerithaz',
-			wins: 896,
-			losses: 316,
+			icon: 'rifleman',
+			name: 'Rune',
+			wins: 1003,
+			losses: 17,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b2a',
@@ -3335,10 +3335,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b2f',
-			icon: 'peon',
-			name: 'yfattorinib5',
+			icon: 'shadow-hunter',
+			name: 'OldDudeTheGuy',
 			wins: 1363,
-			losses: 899,
+			losses: 102,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b30',
@@ -3853,17 +3853,17 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b79',
-			icon: 'peon',
-			name: 'ttunnockd7',
-			wins: 785,
-			losses: 922,
+			icon: 'doomguard',
+			name: 'ThisGuyTurntUp',
+			wins: 1308,
+			losses: 5,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b7a',
-			icon: 'peon',
-			name: 'jlipsettd8',
-			wins: 126,
-			losses: 1000,
+			icon: 'pitlord',
+			name: 'EthericKiller',
+			wins: 1205,
+			losses: 24,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b7b',
@@ -3902,10 +3902,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b80',
-			icon: 'peon',
-			name: 'qceelyde',
-			wins: 310,
-			losses: 876,
+			icon: 'spellbreaker',
+			name: 'LuminaryJay',
+			wins: 1418,
+			losses: 27,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b81',
@@ -3916,10 +3916,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b82',
-			icon: 'peon',
-			name: 'handrolidg',
-			wins: 1003,
-			losses: 329,
+			icon: 'kotg',
+			name: 'Vizion',
+			wins: 1555,
+			losses: 92,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b83',
@@ -4203,10 +4203,10 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76bab',
-			icon: 'peon',
-			name: 'amarymanel',
-			wins: 635,
-			losses: 379,
+			icon: 'maiev-shadowsong',
+			name: 'Silverbird',
+			wins: 933,
+			losses: 15,
 		},
 		{
 			_id: '65325b41fc13ae6f99c76bac',

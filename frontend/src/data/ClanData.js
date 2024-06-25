@@ -7,34 +7,38 @@ const ClanData = {
 			fullName: 'RiZE Nation',
 			players: [
 				{
-					playerId: '6522db28ca04effaba3f19aa',
+					playerId: '65325b41fc13ae6f99c76b11',
 					rank: ClanRank.Chieftain,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
-
 				{
-					playerId: '6522d9042ef17425ee4e4b33',
+					playerId: '6522db28ca04effaba3f19aa',
+					rank: ClanRank.Shaman,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b79',
 					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 
 				{
-					playerId: '6522db308d632cbf7f064a73',
-					rank: ClanRank.Shaman,
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
-					playerId: '6522dd7fdf6c60653124b2ea',
-					rank: ClanRank.Shaman,
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
-					playerId: '65235c722b8f2bf022664d60',
+					playerId: '6521dc03abaa082114cfd55b',
 					rank: ClanRank.Shaman,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522ddb33cfb3a806ebd39a0',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b80',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '6522d9042ef17425ee4e4b33',
 					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
@@ -49,12 +53,67 @@ const ClanData = {
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
-					playerId: '65325b41fc13ae6f99c76aae',
+					playerId: '6522db308d632cbf7f064a73',
 					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
 				{
 					playerId: '6522d90423f17425ee4e4b33',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '6522dd7fdf6c60653124b2ea',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65235c722b8f2bf022664d60',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b1d',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76bab',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b7a',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b82',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b25',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76aae',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76acc',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76aec',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76aed',
 					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
@@ -222,6 +281,11 @@ const ClanData = {
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a1f',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
+				{
+					playerId: '65325b41fc13ae6f99c76b29',
 					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
