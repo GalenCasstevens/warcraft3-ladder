@@ -3860,7 +3860,7 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b7a',
-			icon: 'pitlord',
+			icon: 'pit-lord',
 			name: 'EthericKiller',
 			wins: 1205,
 			losses: 24,
