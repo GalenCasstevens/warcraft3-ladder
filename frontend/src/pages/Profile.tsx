@@ -400,7 +400,7 @@ const Profile: React.FC = () => {
 														Partner(s):
 													</p>
 													<p className="profile-at-partners-value profile-partners">
-														Solar
+														EthericGhost
 													</p>
 												</Col>
 												<Col>
@@ -522,7 +522,7 @@ const Profile: React.FC = () => {
 														Partner(s):
 													</p>
 													<p className="profile-at-partners-value profile-partners">
-														Galen
+														SurGe
 													</p>
 												</Col>
 												<Col>
@@ -583,7 +583,7 @@ const Profile: React.FC = () => {
 														Partner(s):
 													</p>
 													<p className="profile-at-partners-value profile-partners">
-														Vergil
+														MiChAeLJoRdAn23
 													</p>
 												</Col>
 												<Col>
@@ -642,7 +642,7 @@ const Profile: React.FC = () => {
 														Partner(s):
 													</p>
 													<p className="profile-at-partners-value profile-partners">
-														Alina
+														4K]Grubby
 													</p>
 												</Col>
 												<Col>
