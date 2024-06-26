@@ -3902,7 +3902,7 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b80',
-			icon: 'spellbreaker',
+			icon: 'spell-breaker',
 			name: 'LuminaryJay',
 			wins: 1418,
 			losses: 27,
