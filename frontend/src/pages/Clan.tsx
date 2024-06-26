@@ -1,4 +1,6 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { useAppSelector } from '../app/hooks';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -8,12 +10,21 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { IPlayer } from '../interfaces/player.interface';
 import { ClanRank } from '../enums/clanRank.enum';
+import Pagination from '../components/BasicPagination';
 
-const Clan: React.FC = () => {
+const Clan = () => {
 	const { clans } = useAppSelector((state) => state.clans);
 	const { players } = useAppSelector((state) => state.players);
 	const { clanId } = useParams();
 	const clan = clans.find((x) => x._id === clanId);
+
+	const compareRank = (player1: IPlayer, player2: IPlayer) => {
+		const p1Rank = getPlayerRank(player1._id);
+		const p2Rank = getPlayerRank(player2._id);
+		if (p1Rank > p2Rank) return 1;
+		else if (p1Rank < p2Rank) return -1;
+		return 0;
+	};
 
 	const getPlayerRank = (playerId: string) => {
 		const rank =
@@ -21,17 +32,22 @@ const Clan: React.FC = () => {
 		return rank;
 	};
 
-	const compareRank = (player1: IPlayer, player2: IPlayer) => {
-		const p1Rank: number = getPlayerRank(player1._id);
-		const p2Rank: number = getPlayerRank(player2._id);
-		if (p1Rank > p2Rank) return 1;
-		else if (p1Rank < p2Rank) return -1;
-		return 0;
-	};
+	const [members, setMembers] = useState(
+		players
+			?.filter((x) => clan?.players.some((y) => y.playerId === x._id))
+			.sort(compareRank)
+	);
 
-	const members = players
-		?.filter((x) => clan?.players.some((y) => y.playerId === x._id))
-		.sort(compareRank);
+	const [playersPerPage, setPlayersPerPage] = useState(15);
+	const [pageItems, setPageItems] = useState(members?.slice(0, playersPerPage));
+	const [active, setActive] = useState(1);
+
+	const paginate = (pageNumber: number) => {
+		const startPlayerIndex = (pageNumber - 1) * playersPerPage;
+		const endPlayerIndex = pageNumber * playersPerPage;
+		setActive(pageNumber);
+		setPageItems(members?.slice(startPlayerIndex, endPlayerIndex));
+	};
 
 	if (clan && clan !== null) {
 		return (
@@ -60,7 +76,7 @@ const Clan: React.FC = () => {
 							</tr>
 						</thead>
 						<tbody>
-							{members?.map((member) => (
+							{pageItems?.map((member) => (
 								<tr className="clan-content-row">
 									<td className="clan-icon-img-rank-cell">
 										<Row>
@@ -102,6 +118,17 @@ const Clan: React.FC = () => {
 							))}
 						</tbody>
 					</Table>
+					<div
+						id="basic-pagination"
+						style={{ display: 'flex', justifyContent: 'center' }}
+					>
+						<Pagination
+							playersPerPage={15}
+							totalPlayers={members?.length || 0}
+							paginate={paginate}
+							active={active}
+						/>
+					</div>
 				</div>
 			</>
 		);

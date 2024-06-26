@@ -5,7 +5,7 @@ import { setPageItems } from '../features/pagination/paginationSlice';
 import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import Pagination from '../components/Pagination';
+import Pagination from '../components/LeaderboardPagination';
 import { IPlayer } from '../interfaces/player.interface';
 import { ordinalSuffixOf } from '../helpers/Utils';
 
@@ -173,7 +173,10 @@ const Leaderboard = () => {
 						))}
 					</tbody>
 				</Table>
-				<div style={{ display: 'flex', justifyContent: 'center' }}>
+				<div
+					id="leaderboard-pagination"
+					style={{ display: 'flex', justifyContent: 'center' }}
+				>
 					<Pagination />
 				</div>
 			</>

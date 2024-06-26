@@ -2866,7 +2866,7 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76aec',
-			icon: 'peon',
+			icon: 'infernal',
 			name: 'CaptainMelody',
 			wins: 1567,
 			losses: 34,

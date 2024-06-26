@@ -591,6 +591,11 @@ hr {
 	padding-left: 40px;
 }
 
+#basic-pagination .page-item {
+	padding-right: 0px;
+	padding-left: 0px;
+	--bs-pagination-border-radius: 0px !important;
+}
 @media screen and (max-width: 1200px) {
 	.profile-breakdown-col {
 		margin-top: 10px;
@@ -601,6 +606,7 @@ hr {
 	.profile-at-col {
 		margin-top: 10px;
 		padding-left: 20px;
+		box-sizing: inherit;
 	}
 
 	.profile-breakdown-container,
