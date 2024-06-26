@@ -3853,7 +3853,7 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76b79',
-			icon: 'doomguard',
+			icon: 'doom-guard',
 			name: 'ThisGuyTurntUp',
 			wins: 1308,
 			losses: 5,
