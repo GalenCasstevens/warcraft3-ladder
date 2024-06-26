@@ -117,6 +117,11 @@ const ClanData = {
 					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
+				{
+					playerId: '65325b41fc13ae6f99c76b29',
+					rank: ClanRank.Grunt,
+					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
+				},
 			],
 		},
 		{
@@ -281,11 +286,6 @@ const ClanData = {
 				},
 				{
 					playerId: '65325c8afc13ae7264c76a1f',
-					rank: ClanRank.Grunt,
-					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
-				},
-				{
-					playerId: '65325b41fc13ae6f99c76b29',
 					rank: ClanRank.Grunt,
 					joinedDate: 'Wednesday, Oct 11, 2023 3:44PM UTC',
 				},
