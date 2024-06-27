@@ -2873,7 +2873,7 @@ const PlayerData = {
 		},
 		{
 			_id: '65325b41fc13ae6f99c76aed',
-			icon: 'peon',
+			icon: 'spirit-walker',
 			name: 'Ekjaan',
 			wins: 1247,
 			losses: 58,
