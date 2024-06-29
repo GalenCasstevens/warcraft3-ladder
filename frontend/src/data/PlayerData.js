@@ -2153,7 +2153,7 @@ const PlayerData = {
 		{
 			_id: '65325b41fc13ae6f99c76a86',
 			icon: 'peon',
-			name: 'mmalcolmson6g',
+			name: 'birdsong',
 			wins: 307,
 			losses: 651,
 		},
